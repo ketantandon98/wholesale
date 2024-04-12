@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteBase /wholesale/
+
+# Rewrite URLs for pages
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([\w-]+)$ index.php?page=$1 [QSA,L]
